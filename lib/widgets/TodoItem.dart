@@ -18,7 +18,7 @@ class TodoTile extends StatelessWidget {
             : null,
       ),
       trailing: Checkbox(
-        activeColor: Colors.lightBlueAccent,
+        activeColor: Color(0xffEE9177),
         value: isChecked,
         onChanged: onChanged,
       ),

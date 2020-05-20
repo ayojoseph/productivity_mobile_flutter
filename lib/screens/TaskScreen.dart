@@ -10,7 +10,7 @@ class TaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Color(0xffEE9177),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -24,7 +24,7 @@ class TaskScreen extends StatelessWidget {
                   radius: 30,
                   child: Icon(
                     Icons.list,
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xffEE9177),
                     size: 30,
                   ),
                 ),
@@ -64,10 +64,11 @@ class TaskScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Color(0xffEE9177),
         child: Icon(
           Icons.add,
           size: 30,
+          color: Colors.white,
         ),
         onPressed: () {
           showModalBottomSheet(

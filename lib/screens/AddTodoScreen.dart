@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 class AddTodoScreen extends StatelessWidget {
   String todoInput;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,13 +28,22 @@ class AddTodoScreen extends StatelessWidget {
               child: Text(
                 'Add To-Do',
                 style: TextStyle(
-                  color: Colors.lightBlueAccent,
+                  color: Color(0xffEE9177),
                   fontSize: 30,
                 ),
               ),
             ),
             TextField(
               style: TextStyle(),
+              decoration: InputDecoration(
+
+               focusedBorder: UnderlineInputBorder(
+                 borderSide: BorderSide(
+                   color: Color(0xffF7D2AF),
+                   style: BorderStyle.solid,
+                 ),
+               ),
+              ),
               autofocus: true,
               textAlign: TextAlign.center,
               onChanged: (value) {
@@ -48,13 +58,13 @@ class AddTodoScreen extends StatelessWidget {
                 'Add',
                 style: TextStyle(color: Colors.white),
               ),
-              onPressed: (){
+              onPressed: () {
                 context.read<TodoData>().addTodo(todoInput);
 //                Provider.of<TodoData>(context).Todos.add(Todo(title: todoInput));
                 Navigator.pop(context);
               },
               padding: EdgeInsets.symmetric(vertical: 5),
-              color: Colors.lightBlueAccent,
+              color: Color(0xffEE9177),
             )
           ],
         ),
