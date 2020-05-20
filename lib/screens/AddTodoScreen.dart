@@ -59,8 +59,9 @@ class AddTodoScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               onPressed: () {
-                context.read<TodoData>().addTodo(todoInput);
-//                Provider.of<TodoData>(context).Todos.add(Todo(title: todoInput));
+                if(todoInput.length > 0){
+                  context.read<TodoData>().addTodo(todoInput);
+                }
                 Navigator.pop(context);
               },
               padding: EdgeInsets.symmetric(vertical: 5),
